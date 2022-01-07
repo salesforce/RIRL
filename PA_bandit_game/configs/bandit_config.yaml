@@ -1,0 +1,28 @@
+#Config file for running the bandit experiments
+n_a_actions: 10
+n_a_outputs: 10
+agent_exp: 2.0 #Agent risk adversity
+agent_work_multiplier: 0.5 #scales agent work cost
+agent_pay_multiplier: 5 #scales agent pay amount
+
+random_type: c #'c' means exponentially decreasing noise centered at the action, other values can be 'r' which means randomly distributed noise and 'n' which is normally distributed noise
+agent_std_factor: null #std for when random type is "n"
+random_percent: null #probability of outputting output different from action for when random type is 'r'
+random_multiplier: 0.7 #decay rate when random type is 'c
+
+discrete_principal: False
+n_p_actions: null
+principal_profit_multiplier: 6.0 #Scales principal reward given output
+lr_p: 0.001
+n_batch: 128
+anneal_mi: True # If mi should be increased up to the desired value
+anneal_speed: 4 #Rate of mi annealing, speed of 4 means increase at a rate of 4/10000 per episode
+mi_type: 1 #Different ways of calculating mi that involves shuffling with a pay schedule, shuffling everything, updating the mi-classifer before predicting or doing it faster. 1 is best
+
+entropy_regularization: False #Entropy regularization during training. NOTE: this is not the same as the entropy lambda - the entropy lambda regularizes the entropy of the sampled pay schedules (so is a solution property) while this controls the entropy of the model used to generate the pay schedules, so is a training property.
+entropy_anneal: 0.2 # if entropy regularization is true, how fast to decrease entropy to 0. A rate of 0.2 means -0.2/10000
+entropy_begin: 0.2 #if entropy regularization is true, what value to start the entropy
+use_truncated: False # if the pay schedule should be truncated between the max and min means, makes the code slower
+
+save_folder_experiments: temp_experiments/PA_bandit_runs_test #Folder to save experiments
+n_timesteps: 20000

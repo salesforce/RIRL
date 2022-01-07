@@ -1,0 +1,30 @@
+#Config file for running the multiagent signaling game
+n_agent_types : 5
+n_agent_hour_actions : 8 # Number of agent hour actions
+n_agent_effort_actions: 4
+agent_effort_cost_mult: 0.25 #cost of efforts action
+agent_hrs_cost_mult : 1 #cost of the hours action
+min_agent_base_skill : 0.5
+max_agent_base_skill : 5.5
+agent_entropy_coeff: 0.1
+agent_action_mi_cost: 0.0
+agent_state_mi_cost: 0.0
+n_agents: 4
+min_horizon: 2
+max_horizon: 10
+
+n_principal_actions : 11 # Pay from 0 to 10
+principal_profit_mult : 4.0 #revenue : principal_profit_mult * output
+principal_entropy_coeff : 0.1
+principal_action_mi_cost : 0.0
+principal_others_mi_cost : 0.01
+future_rewards_only : True
+# agent_arch_type : 'SQA' #soft q agent
+agent_arch_type : 'RIA' #rational inattention agent
+normalize_t : True #Divide reward by horizon of episode (to keep the reward from getting too large and allow for better comparison of the affect of timesteps)
+normalize_n_a: False #Divide reward by number of agents
+batch_size: 512
+
+n_timesteps: 5000
+folder: 'temp_experiments/PA_multiagent_signaling_runs_test' #where to store the run data, make sure all except the last folder exists, the last folder will be created if it doesn't already exist ('PA_multiagent_signaling_runs_test')
+flag_folder: False #if true will throw an error if the folder already exists (to prevent overwriting)
