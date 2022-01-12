@@ -1,3 +1,10 @@
+#
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+#
+
 #Config file for running the multiagent signaling game
 n_agent_types : 5
 n_agent_hour_actions : 8 # Number of agent hour actions
