@@ -1,8 +1,18 @@
 This repository is inteded to provide reference implementations for the work in the
- paper *Modeling Bounded Rationality in Multi-Agent
- Simulations Using Rationally Inattentive Reinforcement Learning*.
- If you make use of this code, please cite:  
- ...
+ paper *Solving Dynamic Principal-Agent Problems with a Rationally Inattentive
+  Principal*.
+ If you make use of this code, please cite our preprint:  
+ ```
+@misc{mu2022rirl,
+      title={Solving Dynamic Principal-Agent Problems with a Rationally Inattentive Principal}, 
+      author={Tong Mu and Stephan Zheng and Alexander Trott},
+      year={2022},
+      eprint={2202.01691},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA}
+}
+
+```
  
  
 ### RIRL-actor and agent code
