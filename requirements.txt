@@ -31,7 +31,7 @@ numpy==1.21.2
 pyyaml==5.4.1
 scipy==1.21.0
     # via -r requirements.in
-torch==1.9.0
+torch==1.13.1
     # via
     #   -r requirements.in
     #   torchvision
