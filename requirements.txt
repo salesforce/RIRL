@@ -22,7 +22,7 @@ jupyter==1.0.0
     # via -r requirements.in
 matplotlib==3.4.3
     # via -r requirements.in
-numpy==1.21.2
+numpy==1.22.0
     # via
     #   -r requirements.in
     #   gym
